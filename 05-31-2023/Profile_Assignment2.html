@@ -10,6 +10,7 @@
         <p> Hi This is Sai Tejaswi Mandapaka</p>
         <p id ="first"></p>
         <p id="second"></p>
+        <p id="third"></p>
     </body>
     <style>
         img
@@ -39,17 +40,13 @@
             Education:[{Bachelors:'ECE',Masters:'CS'}],
             Hobbies:[{h1:'Cooking',h2:'Reading',h3:'Singing',
             h4:'Dancing',h5:'Playing',h6:'Sketching',
-            h7:'gardening',h8:'Designing',
-            outdoorgames:['Badminton','Throwball','Football'],
+            h7:'gardening',h8:'Designing'},
+            {outdoorgames:['Badminton','Throwball','Football'],
             IndoorGames:['ludo','Chess']}],
             Skills:[{FrontEnd:'React',BackEnd:'Java',DataBase:'SQL'}],
         }
-        document.getElementById("first").innerHTML="My Last Hobby lists Indoor Games which are as follows: "
-        + Profile.Hobbies[0].IndoorGames;
-        document.getElementById("second").innerHTML="My Last Hobby lists Indoor"
-        +" Games out of which the Last indoor game is: "+ Profile.Hobbies[0].IndoorGames[1];
-        console.log(Profile.Hobbies[0].IndoorGames);
-        console.log(Profile.Hobbies[0].IndoorGames[1]);
+        var l= Profile.Hobbies.length;
+        console.log(Profile.Hobbies[l-1]);
         
     </script>
 </html>
