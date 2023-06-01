@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Sai Tejaswi Mandapaka</title>
+    </head>
+    <body>
+        <i><<h1 style="text-align:center;text-decoration: underline; font-family: sans-serif;">
+            Sai Tejaswi Mandapaka</h1></i>
+        <center><img src="C:\Users\Sai Tejaswi\Desktop\opt\TejaswiPassportPhoto.png",
+                alt="TejaswiPassportPhoto"></center>
+        <p> Hi This is Sai Tejaswi Mandapaka</p>
+        <p id ="first"></p>
+        <p id="second"></p>
+    </body>
+    <style>
+        img
+        {
+           height:250px;
+           width:250px;
+           border-radius: 50%;
+           border: 2px solid red;
+        }
+        body
+        {
+            background-color:cornsilk;
+            border: 3px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var Profile ={
+            First_Name :'Sai Tejaswi',
+            Last_Name : 'Mandapaka',
+            gender:'Female',
+            Date_of_Birth:'07-22-1999',
+            gamil_id:'saitejaswi421@gmail.com',
+            Contact_Number:'469-866-8100',
+            address:'Denton,Texas',
+            Education:[{Bachelors:'ECE',Masters:'CS'}],
+            Hobbies:[{h1:'Cooking',h2:'Reading',h3:'Singing',
+            h4:'Dancing',h5:'Playing',h6:'Sketching',
+            h7:'gardening',h8:'Designing',
+            outdoorgames:['Badminton','Throwball','Football'],
+            IndoorGames:['ludo','Chess']}],
+            Skills:[{FrontEnd:'React',BackEnd:'Java',DataBase:'SQL'}],
+        }
+        document.getElementById("first").innerHTML="My Last Hobby lists Indoor Games which are as follows: "
+        + Profile.Hobbies[0].IndoorGames;
+        document.getElementById("second").innerHTML="My Last Hobby lists Indoor"
+        +" Games out of which the Last indoor game is: "+ Profile.Hobbies[0].IndoorGames[1];
+        console.log(Profile.Hobbies[0].IndoorGames);
+        console.log(Profile.Hobbies[0].IndoorGames[1]);
+        
+    </script>
+</html>
