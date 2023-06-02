@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            Creating Environment 
+        </title>
+    </head>
+
+    <script>
+    var environment='dev';
+    var amount =200;
+    var sendAmount;
+    if(environment=='dev')
+    {
+         sendAmount = amount+(amount*0.1);
+         console.log(sendAmount);
+    }
+    else if (environment=='test')
+    {
+        sendAmount = amount+(amount*0.2);
+         console.log(sendAmount);
+    }
+    else if(environment=='stage')
+    {
+        sendAmount = amount+(amount*0.3);
+         console.log(sendAmount);
+    }
+    else if(environment=='prod')
+    {
+        sendAmount = amount+(amount*0.05);
+         console.log(sendAmount);
+    }
+
+
+    /*var amount =200;
+    var environment = prompt("Enter an environment :")
+    switch(environment)
+    {
+        case "dev":
+            sendAmount=amount+(amount*0.1);
+            break;
+        case "test":
+            sendAmount=amount+(amount*0.2);
+            break;
+        case "stage":
+        sendAmount=amount+(amount*0.3);
+        break;
+        case "prod":
+            sendAmount=amount+(amount*0.05);
+            break;
+    }
+    console.log(sendAmount);
+    */
+    
+
+   /* var environment =['dev','test','stage','prod'];
+    var amount =200;
+    var sendAmount;
+    
+    for(i=0;i<environment.length;i++)
+    {
+        var l = environment[i];
+        switch(l)
+        {
+            case 'dev':
+            sendAmount=amount+(amount*0.1);
+            console.log(sendAmount);
+            break;
+            case 'test':
+            sendAmount=amount+(amount*0.2);
+            console.log(sendAmount);
+            break; 
+            case 'stage':
+            sendAmount=amount+(amount*0.3);
+            console.log(sendAmount);
+            case 'prod':
+            sendAmount=amount+(amount*0.05);
+            console.log(sendAmount);
+        }
+        */
+        
+    
+    </script>
+
+</html>
