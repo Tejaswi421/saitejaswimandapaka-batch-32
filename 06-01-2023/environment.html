@@ -6,30 +6,18 @@
     </head>
 
     <script>
-    var environment='dev';
-    var amount =200;
-    var sendAmount;
+   var environment=prompt("Enter an environment : 1.dev 2.test 3.stage 4.prod");
+   var amount =parseInt(prompt("Enter the Amount: "));
+   let sendAmount;
     if(environment=='dev')
-    {
-         sendAmount = amount+(amount*0.1);
-         console.log(sendAmount);
-    }
+    sendAmount = amount+(amount*0.1);
     else if (environment=='test')
-    {
-        sendAmount = amount+(amount*0.2);
-         console.log(sendAmount);
-    }
+    sendAmount = amount+(amount*0.2);
     else if(environment=='stage')
-    {
-        sendAmount = amount+(amount*0.3);
-         console.log(sendAmount);
-    }
-    else if(environment=='prod')
-    {
-        sendAmount = amount+(amount*0.05);
-         console.log(sendAmount);
-    }
-
+    sendAmount = amount+(amount*0.3);  
+    else
+    sendAmount = amount+(amount*0.05);
+console.log(sendAmount);
 
     /*var amount =200;
     var environment = prompt("Enter an environment :")
