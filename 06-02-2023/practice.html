@@ -1,0 +1,40 @@
+<html>
+    <title> Functions Assignment</title>
+    <body>
+        <p> Assignment using Functions</p>
+    </body>
+    <script>
+        let Hobbies=[{h1:'Cooking'},{h2:'Reading',h3:'Singing',
+            h4:'Dancing'},{h5:'Playing',h6:'Sketching',
+            h7:'gardening',h8:'Designing'},
+            {outdoorgames:['Badminton','Throwball','Football'],
+            IndoorGames:['ludo','Chess']},'trekking'];
+        let newHobbies=[];
+            
+       function printHobbies()
+        {
+        console.log(Hobbies);
+        }
+       function addHobby(new_hobby)
+        {
+            newHobbies =[].concat(Hobbies);
+            newHobbies.push(new_hobby);
+            console.log(newHobbies);
+        }
+
+        function deleteHobby(hobby)
+        {
+            
+                let deleteHobbies = newHobbies.filter(function(value)
+                {
+                    return value !=hobby;
+                });
+                //newHobbies.splice(i,1);
+                console.log(deleteHobbies);
+        }
+
+        printHobbies();
+        addHobby('swimming');
+        deleteHobby('trekking');
+    </script>
+    </html>
