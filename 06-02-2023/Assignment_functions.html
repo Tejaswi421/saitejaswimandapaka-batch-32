@@ -1,0 +1,39 @@
+<html>
+    <title> Functions Assignment</title>
+    <body>
+        <p> Assignment using Functions</p>
+    </body>
+    <script>
+        let Hobbies=[{h1:'Cooking'},{h2:'Reading',h3:'Singing',
+            h4:'Dancing'},{h5:'Playing',h6:'Sketching',
+            h7:'gardening',h8:'Designing'},
+            {outdoorgames:['Badminton','Throwball','Football'],
+            IndoorGames:['ludo','Chess']}]
+            
+       function printHobbies()
+        {
+         console.log(Hobbies);
+           
+        }
+       function addHobby()
+        {
+
+           const new_hobby=prompt("Enter a hobby");
+            Hobbies.push(new_hobby);
+            console.log("New hobby is :",new_hobby);
+            console.log(Hobbies);
+        }
+
+        function deleteHobby(index,no_of_elements)
+        {
+            Hobbies.splice(index,no_of_elements);
+            console.log(Hobbies);
+        }
+            
+       printHobbies();
+       //addHobby();
+       //deleteHobby(1,2);
+
+          
+    </script>
+    </html>
