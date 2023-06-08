@@ -2,29 +2,50 @@
     <head>
         <title>My Webpage using HTML Forms</title>
         <body style="text-align: center;background-color: bisque;">
+            <form id="profileinfo">
            <h1 style="text-align: center;text-decoration: underline;">Displaying the Profile Information in DoM </h1>
            <div id="first" style="color: black; text-align: center;">
             First Name: <input type="text" id="fname" name="fname"><br><br>
             Last Name:<input type="text" id="lname" name="lname"><br><br>
-            Email Address:<input type="text" id="email" name="email"><br><br>
+            Email Address:<input type="email" id="email" name="email"><br><br>
             Date of Birth:<input type="date" id="dob" name="dob"><br><br>
             Phone Number: <input type="number" id="Pno" name="Pno"><br><br>
-            <button onclick="print()" type="Submit">Submit</button>
+            Hobbies:<input type="checkbox" name="hobby" id="hobby1" value="Singing">Singing
+            <input type="checkbox" name="hobby" id="hobby2" value="Dancing">Dancing
+            <input type="checkbox" name="hobby" id="hobby3" value="Cooking">Cooking
+            <button type="submit" onclick="print(event)">Submit</button>
             </div>
             <p id="second"></p>
-           </form>
+            </form>  
         </body>
         <script> 
-        function print()
+        function print(event)
         {
+        event.preventDefault();
         const firstname =document.getElementById("fname").value;
         const lastname=document.getElementById("lname").value;
         const email_address=document.getElementById("email").value;
         const date_of_birth=document.getElementById("dob").value;
         const phone_number=document.getElementById("Pno").value;
-        document.getElementById("first").innerHTML="FirstName: "+firstname+ "<br><br>"+
+        var hobbies=[];
+        if(document.getElementById("hobby1").checked)
+        {
+            hobbies.push(document.getElementById("hobby1").value);
+        }
+        if(document.getElementById("hobby2").checked)
+        {
+            hobbies.push(document.getElementById("hobby2").value);
+        }
+        if(document.getElementById("hobby3").checked)
+        {
+            hobbies.push(document.getElementById("hobby3").value);
+        }
+        
+        document.getElementById("second").innerHTML="FirstName: "+firstname+ "<br><br>"+
          "LastName: "+lastname+"<br><br>"+"Email: "+email_address+"<br><br>"+"Date of Birth: "
-         +date_of_birth+"<br><br>"+"Phone Number: "+phone_number;
+         +date_of_birth+"<br><br>"+"Phone Number: "+phone_number
+         +"<br><br>"+"Hobbies: "+hobbies;
+         console.log(hobbies);
         }
         </script>
     </head>
