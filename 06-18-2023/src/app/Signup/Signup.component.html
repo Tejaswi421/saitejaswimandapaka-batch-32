@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h1>Signup Page</h1>
+    First Name:<input type="text" [(ngModel)]="fname" id="fname"><br><br>
+    Last Name:<input type="text" [(ngModel)]="lname" id="lname"><br><br>
+    Email Id:<input type="email" [(ngModel)]="email" id="email"><br><br>
+    Date of Birth:<input type="date" [(ngModel)]="dob" id="dob"><br><br>
+    Phone number:<input type="number" [(ngModel)]="pno" id="pno"><br><br>
+    Password:<input type="text" [(ngModel)]="password" id="password"><br><br>
+   Confirm Password:<input type="text" [(ngModel)]="cpassword"><br><br>
+    <input type="button" (click)="onSignUp()" value="SignUp"> 
+  </body>
+</html>

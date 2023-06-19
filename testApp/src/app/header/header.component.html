@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <p> Hi This is Tejaswi!!</p>
+    <p>{{name}}</p>
+    <img [src]="image" alt="" style="height:500px; width:500px">
+    <div><input [(ngModel)]="value" type="text">{{value}}</div>
+    <button (click)="onClick()"> Click Here</button><br>
+    <div *ngIf="name=='Tejaswi'">yes name is crct</div>
+   <div *ngIf="name=='Tejaswi';else diffName">Name is Tejaswi</div>
+    <ng-template #diffName>Different Name</ng-template>
+   <!--<div [hidden]="name=='Tejaswi'">Tejaswi</div>
+  <div [hidden]="name!='Tejaswi'">Different Name</div>-->
+  <ul class="nav-nav-pills">
+    <!--<li class="active"><a href="">Map View</a></li>
+    <li class="active"><a href="">List View</a></li>-->
+    <button [class.active]="viewMode=='map'" ><a (click)="viewMode='map'">Map View</a></button>
+    <button [class.active]="viewMode=='list'" ><a (click)="viewMode='list'">List View</a></button>
+    <button [class.active]="viewMode=='s'" ><a (click)="viewMode='s'">sds</a></button>
+  </ul>
+  <div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+    <div *ngSwitchDefault="">Otherwise</div>
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses; index as i">{{i}}-{{course.name}}</li>
+  
+ </ul>
+ 
+ <!--<ul>
+  <li *ngFor="let course of courses; even as isEven">{{course.name}}<span *ngIf="isEven">(EVEN)</span></li>
+ </ul>-->
+
+<!--<ul>
+  <li *ngFor="let course of courses; odd as isOdd">{{course.name}}<span *ngIf="isOdd">(ODD)</span></li>
+ </ul>-->
+</div>
+</body>
+</html>
